@@ -98,7 +98,6 @@ public class InstallMojo extends AbstractMojo {
 		}
 	}
 
-	@Override
 	public void execute() throws MojoExecutionException, MojoFailureException {
 		getLog().info("Preparing Cat environment...");
 
@@ -225,7 +224,6 @@ public class InstallMojo extends AbstractMojo {
 		} else {
 			m_jdbcUrl = PropertyProviders.fromConsole().forString("jdbc.url", "Please input jdbc url:", null,
 			      "jdbc:mysql://127.0.0.1:3306", new IValidator<String>() {
-				      @Override
 				      public boolean validate(String url) {
 					      if (url.startsWith("jdbc:mysql://")) {
 						      return true;

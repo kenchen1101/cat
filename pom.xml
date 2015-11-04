@@ -73,27 +73,29 @@
 				<artifactId>junit</artifactId>
 				<version>4.8.1</version>
 			</dependency>
+			 
 			<dependency>
-				<groupId>org.mortbay.jetty</groupId>
+				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty</artifactId>
 				<version>6.1.14</version>
 			</dependency>
 			<dependency>
-				<groupId>org.mortbay.jetty</groupId>
+				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-util</artifactId>
 				<version>6.1.14</version>
 			</dependency>
 			<dependency>
-				<groupId>org.mortbay.jetty</groupId>
+				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jsp-api-2.1</artifactId>
 				<version>6.1.14</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
-				<groupId>org.mortbay.jetty</groupId>
+				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jsp-2.1</artifactId>
 				<version>6.1.14</version>
 			</dependency>
+			
 			<dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>servlet-api</artifactId>
@@ -141,6 +143,7 @@
 							<include>**/AllTests.java</include>
 						</includes>
 						<!-- <debugForkedProcess>-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000 -Xnoagent -Djava.compiler=NONE</debugForkedProcess> -->
+						<skipTests>true</skipTests> <!-- dev env -->
 					</configuration>
 					<dependencies>
 						<dependency>
